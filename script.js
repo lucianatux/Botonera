@@ -19,38 +19,56 @@ const firstSoundsGroup = [
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'
     },
     {
-      keyCode: 65,
-      key: 'A',
+      keyCode: 82,
+      key: 'R',
       id: 'Heater-4',
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3'
     },
     {
-      keyCode: 83,
-      key: 'S',
+      keyCode: 65,
+      key: 'A',
       id: 'Clap',
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3'
     },
     {
-      keyCode: 68,
-      key: 'D',
+      keyCode: 83,
+      key: 'S',
       id: 'Open-HH',
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'
     },
     {
-      keyCode: 90,
-      key: 'Z',
+      keyCode: 68,
+      key: 'D',
       id: "Kick-n'-Hat",
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
     },
     {
-      keyCode: 88,
-      key: 'X',
+      keyCode: 70,
+      key: 'F',
       id: 'Kick',
       url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
     },
     {
+      keyCode: 90,
+      key: 'Z',
+      id: 'Closed-HH',
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+    },
+    {
+      keyCode: 88,
+      key: 'X',
+      id: "Kick-n'-Hat",
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
+    },
+    {
       keyCode: 67,
       key: 'C',
+      id: 'Kick',
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
+    },
+    {
+      keyCode: 86,
+      key: 'V',
       id: 'Closed-HH',
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
     }
@@ -77,40 +95,58 @@ const secondSoundsGroup = [
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3'
     },
     {
-      keyCode: 65,
-      key: 'A',
+      keyCode: 82,
+      key: 'R',
       id: 'Shaker',
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3'
     },
     {
-      keyCode: 83,
-      key: 'S',
+      keyCode: 65,
+      key: 'A',
       id: 'Open-HH',
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3'
     },
     {
-      keyCode: 68,
-      key: 'D',
+      keyCode: 83,
+      key: 'S',
       id: 'Closed-HH',
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3'
     },
     {
-      keyCode: 90,
-      key: 'Z',
+      keyCode: 68,
+      key: 'D',
       id: 'Punchy-Kick',
       url: 'https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3'
     },
     {
-      keyCode: 88,
-      key: 'X',
+      keyCode: 70,
+      key: 'F',
       id: 'Side-Stick',
       url: 'https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3'
     },
     {
-      keyCode: 67,
-      key: 'C',
+      keyCode: 90,
+      key: 'Z',
       id: 'Snare',
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+    },
+    {
+      keyCode: 88,
+      key: 'X',
+      id: "Kick-n'-Hat",
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
+    },
+    {
+      keyCode: 67,
+      key: 'C',
+      id: 'Kick',
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
+    },
+    {
+      keyCode: 86,
+      key: 'V',
+      id: 'Closed-HH',
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
     }
   ];
 
@@ -161,7 +197,7 @@ const Keyboard = ({ sounds, play, power, deactivateAudio }) =>  (
   // Componente para representar los controles del drum machine
 const DumControle = ({ stop, name, power, volume, handleVolumeChange, changeSoundGroup }) => (
   <div className="controle">
-    <button onClick={stop}>Turn Power {power ? 'OFF' : 'ON'}</button>
+    <button onClick={stop}>Power {power ? 'OFF' : 'ON'}</button>
     <h2>Volume: %{Math.round(volume * 100)}</h2>
     <input
       max="1"
