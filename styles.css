@@ -22,20 +22,20 @@
   .wrapper {
       width: 100%;
       display: grid;
-      padding: 10px;
-      grid-gap: 15px;
-      margin-top: 40px;
+      padding: 1rem;
+      grid-gap: 1rem;
+      margin-top: 1rem;
       border-radius: 15px;
       grid-template-columns: 1fr;
       background-image: linear-gradient(
   -225deg
-  , #755dd5 35%, #b9deff 100%);
+  , #0e5275 35%, #8799a9 100%);
   }
   
   .keyboard {
       display: grid;
-      grid-gap: 10px;
-      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+      grid-template-columns: repeat(4, 1fr);
   }
   
   .keyboard .drum-pad {
