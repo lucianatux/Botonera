@@ -161,14 +161,13 @@ const soundsGroup = {
 }
 
 // Componente para representar una tecla del teclado
-const KeyboardKey = ({ play, deactivateAudio, sound: { id, key, url, keyCode } }) => {
+const KeyboardKey = ({ play, sound: { id, key, url, keyCode } }) => {
   
   // Maneja el evento de presionar una tecla en el teclado
   const handleKeydown = (e) => {
     if(keyCode === e.keyCode) {
       const audio = document.getElementById(key);
       play(key, id); // Reproduce el sonido asociado a la tecla
-      deactivateAudio(audio); // Desactiva el estilo de la tecla después de reproducir el sonido
     }
   }
   
@@ -191,8 +190,8 @@ const KeyboardKey = ({ play, deactivateAudio, sound: { id, key, url, keyCode } }
 const Keyboard = ({ sounds, play, power, deactivateAudio }) =>  (
   <div className="keyboard">
     {power 
-      ? sounds.map((sound) => <KeyboardKey sound={sound} play={play} deactivateAudio={deactivateAudio} />)
-      : sounds.map((sound) => <KeyboardKey sound={{...sound, url: "#" }} play={play} deactivateAudio={deactivateAudio} />)        
+      ? sounds.map((sound) => <KeyboardKey sound={sound} play={play}  />)
+      : sounds.map((sound) => <KeyboardKey sound={{...sound, url: "#" }} play={play}  />)        
     }
   </div>
 );
@@ -225,36 +224,12 @@ const App = () => {
   const [soundType, setSoundType] = React.useState("firstKit");
   const [sounds, setSounds] = React.useState(soundsGroup[soundType]);
   
-  // Aplica estilo a la tecla activa
-  const styleActiveKey = (key) => {
-    key.parentElement.style.backgroundColor = "#000000"
-    key.parentElement.style.color = "#ffffff"
-  }
-  
-  // Desactiva el estilo de la tecla
-  const deActivatedKey = (audio) => {
-    setTimeout(() => {
-      audio.parentElement.style.backgroundColor = "#ffffff"
-      audio.parentElement.style.color = "#000000"
-    }, 100)
-  }
- 
-  // Desactiva el estilo de la tecla después de un tiempo determinado
- const deactivateAudio = (audio) => {
-   setTimeout(() => {
-     audio.parentElement.style.backgroundColor = "#ffffff"
-     audio.parentElement.style.color = "#000000"
-   }, 100)
- }
-
-  // Reproduce el sonido asociado a la tecla y establece el nombre del sonido
+   // Reproduce el sonido asociado a la tecla y establece el nombre del sonido
   const play = (key, sound) => {
     setSoundName(sound)
     const audio = document.getElementById(key);
-    styleActiveKey(audio);  // Aplica estilo a la tecla activa
     audio.currentTime = 0;
     audio.play();
-    deactivateAudio(audio)  // Desactiva el estilo de la tecla después de reproducir el sonido
   }
 
   // Detiene o activa el drum machine
@@ -293,7 +268,7 @@ const App = () => {
     <div id="drum-machine">
       {setKeyVolume()}
       <div className="wrapper">
-        <Keyboard sounds={sounds} play={play} power={power} deactivateAudio={deactivateAudio} />
+        <Keyboard sounds={sounds} play={play} power={power}  />
         <DumControle 
           stop={stop}
           power={power}

@@ -32,7 +32,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  color: #ddd !important;
+  color: #eee !important;
   font-family: "Centra", sans-serif !important;
   background-image: url("./3238627.jpg");
   background-size: auto 100%; /* Establece el ancho al 100% y la altura automática */
@@ -103,10 +103,16 @@ h2 {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   letter-spacing: 1px;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #09164d;
   color: #ddd;
   transition: all 0.3s ease-in-out;
+  box-shadow: 2px 2px 2px 1px #153184;
+}
+
+.drum-pad:hover{
+  box-shadow: 2px 2px 2px 1px #fff;
+  color: #fff;
 }
 
 @media (min-width: 768px) {
