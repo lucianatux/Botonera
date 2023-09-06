@@ -9,62 +9,62 @@ const firstSoundsGroup = [
     {
       keyCode: 87,
       key: 'W',
-      id: 'TocToc',
-      url: '../assets/toctoc.mp3'
-    },
-    {
-      keyCode: 69,
-      key: 'E',
-      id: 'Ventana Rota',
-      url: '../assets/ventanarota.mp3'
-    },
-    {
-      keyCode: 82,
-      key: 'R',
       id: 'Lluvia',
       url: '../assets/Lluvia.mp3'
     },
     {
+      keyCode: 69,
+      key: 'E',
+      id: 'Neblina',
+      url: '../assets/neblina.mp3'
+    },
+    {
+      keyCode: 82,
+      key: 'R',
+      id: 'Viento',
+      url: '../assets/viento.mp3'
+    },
+    {
       keyCode: 65,
       key: 'A',
-      id: 'Timbre',
-      url: '../assets/timbre.mp3'
+      id: 'Toc-toc',
+      url: '../assets/toctoc.mp3'
     },
     {
       keyCode: 83,
       key: 'S',
-      id: 'Cadena Inodoro',
-      url: '../assets/cadenainodoro.mp3'
+      id: 'Timbre',
+      url: '../assets/timbre.mp3'
     },
     {
       keyCode: 68,
       key: 'D',
-      id: "Neblina",
-      url: '../assets/neblina.mp3'
+      id: "Subir escalera",
+      url: '../assets/subirescalera.mp3'
     },
     {
       keyCode: 70,
       key: 'F',
-      id: 'Subir escalera',
-      url: '../assets/subirescalera.mp3'
+      id: 'Bajar escalera',
+      url: '../assets/bajarescalera.mp3'
     },
     {
       keyCode: 90,
       key: 'Z',
-      id: 'Goteo',
-      url: '../assets/goteo.mp3'
+      id: 'Ventana rota',
+      url: '../assets/ventanarota.mp3'
     },
     {
       keyCode: 88,
       key: 'X',
-      id: "Viento",
-      url: '../assets/viento.mp3'
+      id: "Cadena inodoro",
+      url: '../assets/cadenainodoro.mp3'
     },
     {
       keyCode: 67,
       key: 'C',
-      id: 'Bajar escalera',
-      url: '../assets/bajarescalera.mp3'
+      id: 'Goteo',
+      url: '../assets/goteo.mp3'
     },
     {
       keyCode: 86,
@@ -79,8 +79,8 @@ const secondSoundsGroup = [
     {
       keyCode: 81,
       key: 'Q',
-      id: 'Calandria',
-      url: '../otros/calandria.mp3'
+      id: 'Piedrazo a la ventana',
+      url: '../otros/piedrazoalaventana.mp3'
     },
     {
       keyCode: 87,
@@ -109,8 +109,8 @@ const secondSoundsGroup = [
     {
       keyCode: 83,
       key: 'S',
-      id: 'Chiflido de Viento',
-      url: '../otros/chiflidodeviento.mp3'
+      id: 'Calandria',
+      url: '../otros/calandria.mp3'
     },
     {
       keyCode: 68,
@@ -121,8 +121,8 @@ const secondSoundsGroup = [
     {
       keyCode: 70,
       key: 'F',
-      id: 'Piedrazo a la ventana',
-      url: '../otros/piedrazoalaventana.mp3'
+      id: 'Chiflido de viento',
+      url: '../otros/chiflidodeviento.mp3'
     },
     {
       keyCode: 90,
@@ -187,7 +187,7 @@ const KeyboardKey = ({ play, sound: { id, key, url, keyCode } }) => {
 }
 
   // Componente para representar el teclado de sonidos
-const Keyboard = ({ sounds, play, power, deactivateAudio }) =>  (
+const Keyboard = ({ sounds, play, power }) =>  (
   <div className="keyboard">
     {power 
       ? sounds.map((sound) => <KeyboardKey sound={sound} play={play}  />)
@@ -239,15 +239,28 @@ const App = () => {
   
   // Cambia entre los grupos de sonidos disponibles
   const changeSoundGroup = () => {
-    setSoundName("")
-    if(soundType === "firstKit"){
-        setSoundType("secondKit");
-        setSounds(soundsGroup.secondKit);
+    setSoundName("");
+    if (soundType === "firstKit") {
+      setSoundType("secondKit");
+      setSounds(soundsGroup.secondKit);
+      // Cambia el color de fondo de los botones cuando se activa el "secondKit"
+      const drumPadButtons = document.querySelectorAll(".drum-pad");
+      drumPadButtons.forEach((button) => {
+        button.style.backgroundColor = "#3c0877"; // Cambia el color de fondo a rojo
+      });
     } else {
-        setSoundType("firstKit");
-        setSounds(soundsGroup.firstKit);
+      setSoundType("firstKit");
+      setSounds(soundsGroup.firstKit);
+      // Restaura el color de fondo original de los botones cuando se activa el "firstKit"
+      const drumPadButtons = document.querySelectorAll(".drum-pad");
+      drumPadButtons.forEach((button) => {
+        button.style.backgroundColor = "#09164d"; // Restaura el color de fondo original
+      });
     }
-  }
+  };
+  
+  
+  
   
   // Maneja el cambio de volumen
   const handleVolumeChange = e => {
