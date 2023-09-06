@@ -160,31 +160,43 @@ const soundsGroup = {
   secondKit: secondSoundsGroup
 }
 
-// Componente para representar una tecla del teclado
 const KeyboardKey = ({ play, sound: { id, key, url, keyCode } }) => {
-  
-  // Maneja el evento de presionar una tecla en el teclado
+  const [isPlaying, setIsPlaying] = React.useState(false);
+
   const handleKeydown = (e) => {
-    if(keyCode === e.keyCode) {
+    if (keyCode === e.keyCode) {
       const audio = document.getElementById(key);
-      play(key, id); // Reproduce el sonido asociado a la tecla
+      if (!isPlaying) {
+        play(key, id);
+        setIsPlaying(true);
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+        setIsPlaying(false);
+      }
     }
-  }
+  };
+
+  // Restablecer el estado cuando cambia el sonido
+  React.useEffect(() => {
+    setIsPlaying(false);
+  }, [id]);
   
   React.useEffect(() => {
-      document.addEventListener('keydown', handleKeydown);
-  }, [])
+    document.addEventListener('keydown', handleKeydown);
+}, [])
 
-  return (
-    <button value="test" id={keyCode} className="drum-pad" onClick={() => play(key, id)}>
-      <audio className="clip" src={url} id={key} />
-      
-      <div className="button-text">
-        <span className="button-title">{id}</span>
-      </div>
-    </button>
-  );
-}
+return (
+  <button value="test" id={keyCode} className="drum-pad" onClick={() => play(key, id)}>
+    <audio className="clip" src={url} id={key} />
+    
+    <div className="button-text">
+      <span className="button-title">{id}</span>
+    </div>
+  </button>
+);
+};
+
 
   // Componente para representar el teclado de sonidos
 const Keyboard = ({ sounds, play, power }) =>  (
@@ -223,14 +235,24 @@ const App = () => {
   const [soundName, setSoundName] = React.useState("");
   const [soundType, setSoundType] = React.useState("firstKit");
   const [sounds, setSounds] = React.useState(soundsGroup[soundType]);
+  const [isPlaying, setIsPlaying] = React.useState(false);
+
   
    // Reproduce el sonido asociado a la tecla y establece el nombre del sonido
   const play = (key, sound) => {
-    setSoundName(sound)
+    setSoundName(sound);
     const audio = document.getElementById(key);
-    audio.currentTime = 0;
-    audio.play();
-  }
+    if (!isPlaying) {
+      audio.currentTime = 0;
+      audio.play();
+      setIsPlaying(true);
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+      setIsPlaying(false);
+    }
+  };
+  
 
   // Detiene o activa el drum machine
   const stop = () => {
@@ -258,9 +280,6 @@ const App = () => {
       });
     }
   };
-  
-  
-  
   
   // Maneja el cambio de volumen
   const handleVolumeChange = e => {
