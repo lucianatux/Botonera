@@ -1,103 +1,145 @@
- 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 75px;
-  }
-  
-  body {
-    font-weight: 400;
-    overflow-x: hidden;
-    position: relative;
-    color: #ddd !important;
-    font-family: 'Centra', sans-serif !important;
-    /*background-image: url("./ladrillos.jpg");*/
-    background-image: radial-gradient(
+/************ Custom Font ************/
+@font-face {
+  font-family: Centra;
+  src: url("./fonts/CentraNo2-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Centra;
+  src: url("./fonts/CentraNo2-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Centra;
+  src: url("./fonts/CentraNo2-Book.ttf");
+  font-weight: 400;
+}
+
+/************ Default Css ************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  color: #ddd !important;
+  font-family: "Centra", sans-serif !important;
+  background-image: url("./3238627.jpg");
+  background-size: auto 100%; /* Establece el ancho al 100% y la altura automática */
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+  /*background-image: radial-gradient(
   circle
-  , #0e5275 35%, #050e15 100%);
-  }
+  , #0e5275 35%, #050e15 100%);*/
+}
 
-  h2 {
-    font-size: 28px;
-    padding: 10px;
-  }
-  
-  #drum-machine {
-    margin: 15px;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Cambia el valor alpha para ajustar la opacidad */
+  z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+}
+
+/* Estilo opcional para el contenido principal */
+.content {
+  /* Agrega un margen superior para evitar que el contenido se superponga con el fondo */
+  margin-top: 100px;
+}
+
+h2 {
+  font-size: 28px;
+  padding: 10px;
+}
+
+#drum-machine {
+  margin: 15px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  padding: 1rem;
+  grid-gap: 1rem;
+  margin-top: 1rem;
+  border-radius: 15px;
+  grid-template-columns: 1fr;
+}
+
+.keyboard {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.keyboard .drum-pad {
+  width: 100%;
+  /*height: 90px;*/
+  outline: none;
+  padding: 20px;
+  font-size: 22px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #09164d;
+  color: #ddd;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
   .wrapper {
-      width: 100%;
-      display: grid;
-      padding: 1rem;
-      grid-gap: 1rem;
-      margin-top: 1rem;
-      border-radius: 15px;
-      grid-template-columns: 1fr;
+    width: 680px;
   }
-  
-  .keyboard {
-      display: grid;
-      grid-gap: 2rem;
-      grid-template-columns: repeat(4, 1fr);
-  }
-  
-  .keyboard .drum-pad {
-    width: 100%;
-    height: 80px;
-    outline: none;
-    padding: 5px;
-    font-size: 22px;
-    font-style: italic;
-    cursor: pointer;
-    border-radius: 10px;
-    background-color: #333;
-    color: #ddd;
-    transition: all .3s ease-in-out
-  }
-  
-  @media(min-width: 768px){
-    .wrapper {
-        width: 680px;
-    }
-  }
-  
-  @media(min-width: 992px){
-    .wrapper {
-       grid-template-columns: 1fr 1fr;
-    }
-  }
-  
-  .controle {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .controle > button,
-  .controle > input,
-  .controle > h2{
-    margin-bottom: 10px
-  }
-  
-  .controle button{
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 20px;
-    padding: 8px 10px;
-    border-radius: 5px;
-    background-color: #000000;
-  }
+}
 
+@media (min-width: 992px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.controle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.controle > button,
+.controle > input,
+.controle > h2 {
+  margin-bottom: 10px;
+}
+
+.controle button {
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  background-color: #000000;
+}

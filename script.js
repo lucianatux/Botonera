@@ -4,73 +4,73 @@ const firstSoundsGroup = [
       keyCode: 81,
       key: 'Q',
       id: 'Trueno',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3'
+      url: '../assets/Trueno.mp3'
     },
     {
       keyCode: 87,
       key: 'W',
-      id: 'Viento',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3'
+      id: 'TocToc',
+      url: '../assets/toctoc.mp3'
     },
     {
       keyCode: 69,
       key: 'E',
-      id: 'Lluvia',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'
+      id: 'Ventana Rota',
+      url: '../assets/ventanarota.mp3'
     },
     {
       keyCode: 82,
       key: 'R',
-      id: 'Pajaros',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3'
+      id: 'Lluvia',
+      url: '../assets/Lluvia.mp3'
     },
     {
       keyCode: 65,
       key: 'A',
-      id: 'Ganso',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3'
+      id: 'Timbre',
+      url: '../assets/timbre.mp3'
     },
     {
       keyCode: 83,
       key: 'S',
-      id: 'Elefante',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'
+      id: 'Cadena Inodoro',
+      url: '../assets/cadenainodoro.mp3'
     },
     {
       keyCode: 68,
       key: 'D',
-      id: "Lobo",
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
+      id: "Neblina",
+      url: '../assets/neblina.mp3'
     },
     {
       keyCode: 70,
       key: 'F',
-      id: 'Sapos',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
+      id: 'Subir escalera',
+      url: '../assets/subirescalera.mp3'
     },
     {
       keyCode: 90,
       key: 'Z',
-      id: 'Rio',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+      id: 'Goteo',
+      url: '../assets/goteo.mp3'
     },
     {
       keyCode: 88,
       key: 'X',
-      id: "Oleaje",
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
+      id: "Viento",
+      url: '../assets/viento.mp3'
     },
     {
       keyCode: 67,
       key: 'C',
-      id: 'BajoElMar',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
+      id: 'Bajar escalera',
+      url: '../assets/bajarescalera.mp3'
     },
     {
       keyCode: 86,
       key: 'V',
-      id: 'Fuego',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+      id: 'Abrir puerta',
+      url: '../assets/abrirpuerta.mp3'
     }
   ];
 
@@ -79,80 +79,80 @@ const secondSoundsGroup = [
     {
       keyCode: 81,
       key: 'Q',
-      id: 'Brindis',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3'
+      id: 'Calandria',
+      url: '../otros/calandria.mp3'
     },
     {
       keyCode: 87,
       key: 'W',
-      id: 'Monedas',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3'
+      id: 'Cerrar puerta',
+      url: '../otros/cerrarpuerta.mp3'
     },
     {
       keyCode: 69,
       key: 'E',
-      id: 'Puerta',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3'
+      id: 'Empujar puerta',
+      url: '../otros/empujarpuerta.mp3'
     },
     {
       keyCode: 82,
       key: 'R',
-      id: 'Timbre',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3'
+      id: 'Haciendo pis',
+      url: '../otros/haciendopis.mp3'
     },
     {
       keyCode: 65,
       key: 'A',
-      id: 'Cubiertos',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3'
+      id: 'Canarios',
+      url: '../otros/canarios.mp3'
     },
     {
       keyCode: 83,
       key: 'S',
-      id: 'Pasos',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3'
+      id: 'Chiflido de Viento',
+      url: '../otros/chiflidodeviento.mp3'
     },
     {
       keyCode: 68,
       key: 'D',
-      id: 'Risas',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3'
+      id: 'Otra lluvia',
+      url: '../otros/otralluvia.mp3'
     },
     {
       keyCode: 70,
       key: 'F',
-      id: 'Murmullos',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3'
+      id: 'Piedrazo a la ventana',
+      url: '../otros/piedrazoalaventana.mp3'
     },
     {
       keyCode: 90,
       key: 'Z',
-      id: 'Canilla',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
+      id: 'Grillos',
+      url: '../otros/grillos.mp3'
     },
     {
       keyCode: 88,
       key: 'X',
-      id: "Ladridos",
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
+      id: "Encender fogata",
+      url: '../otros/encenderfogata.mp3'
     },
     {
       keyCode: 67,
       key: 'C',
-      id: 'Trafico',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
+      id: 'Aleteo Pájaros',
+      url: '../otros/aleteopajaros.mp3'
     },
     {
       keyCode: 86,
       key: 'V',
-      id: 'Grillos',
-      url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+      id: 'Mosca',
+      url: '../otros/mosca.mp3'
     }
   ];
 
 const soundsName = {
-  firstKit: "Naturaleza", // Nombre del primer grupo de sonidos
-  secondKit: "Casa"  // Nombre del segundo grupo de sonidos
+  firstKit: "Casa mutante", // Nombre del primer grupo de sonidos
+  secondKit: "Otros"  // Nombre del segundo grupo de sonidos
 };
 
 const soundsGroup = {
@@ -233,8 +233,10 @@ const App = () => {
   
   // Desactiva el estilo de la tecla
   const deActivatedKey = (audio) => {
-    audio.parentElement.style.backgroundColor = "#ffffff"
-    audio.parentElement.style.color = "#000000"
+    setTimeout(() => {
+      audio.parentElement.style.backgroundColor = "#ffffff"
+      audio.parentElement.style.color = "#000000"
+    }, 100)
   }
  
   // Desactiva el estilo de la tecla después de un tiempo determinado
@@ -242,7 +244,7 @@ const App = () => {
    setTimeout(() => {
      audio.parentElement.style.backgroundColor = "#ffffff"
      audio.parentElement.style.color = "#000000"
-   }, 300)
+   }, 100)
  }
 
   // Reproduce el sonido asociado a la tecla y establece el nombre del sonido
