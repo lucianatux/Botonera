@@ -4,7 +4,7 @@ const firstSoundsGroup = [
       keyCode: 81,
       key: 'Q',
       id: 'Trueno',
-      url: '../assets/Trueno.mp3'
+      url: '../Trueno.mp3'
     },
     {
       keyCode: 87,
