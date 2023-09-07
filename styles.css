@@ -53,7 +53,7 @@ body::before {
     0,
     0,
     0,
-    0.5
+    0.2
   ); /* Cambia el valor alpha para ajustar la opacidad */
   z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
 }
