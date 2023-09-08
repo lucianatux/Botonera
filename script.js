@@ -114,63 +114,63 @@ const secondSoundsGroup = [
       keyCode: 82,
       key: 'R',
       id: 'Haciendo pis',
-      url: './otros/haciendopis.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/Urinating_01_Sound_Effect_Mp3_130.mp3'
     },
     {
       id:17,
       keyCode: 65,
       key: 'A',
       id: 'Canarios',
-      url: './otros/canarios.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/canary-singing.mp3'
     },
     {
       id:18,
       keyCode: 83,
       key: 'S',
-      id: 'Calandria',
-      url: './otros/calandria.mp3'
+      id: 'Pájaro',
+      url: 'http://www.sonidosmp3gratis.com/sounds/PajarosBIRD4.mp3'
     },
     {
       id:19,
       keyCode: 68,
       key: 'D',
       id: 'Otra lluvia',
-      url: './otros/otralluvia.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/la-lluvia_1.mp3'
     },
     {
       id:20,
       keyCode: 70,
       key: 'F',
       id: 'Chiflido de viento',
-      url: './otros/chiflidodeviento.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/el-ambiente_3.mp3'
     },
     {
       id:21,
       keyCode: 90,
       key: 'Z',
       id: 'Grillos',
-      url: './otros/grillos.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/ringtones-grillos.mp3'
     },
     {
       id:22,
       keyCode: 88,
       key: 'X',
-      id: "Encender fogata",
-      url: './otros/encenderfogata.mp3'
+      id: "Encendedor",
+      url: 'http://www.sonidosmp3gratis.com/sounds/lighter-strike.mp3'
     },
     {
       id:23,
       keyCode: 67,
       key: 'C',
       id: 'Aleteo Pájaros',
-      url: './otros/aleteopajaros.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/008624741_prev.mp3'
     },
     {
       id:24,
       keyCode: 86,
       key: 'V',
       id: 'Mosca',
-      url: './otros/mosca.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/ANIMALFLY_6049_60.mp3'
     }
   ];
 
