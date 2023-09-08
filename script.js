@@ -5,84 +5,84 @@ const firstSoundsGroup = [
       keyCode: 81,
       key: 'Q',
       id: 'Trueno',
-      url: './assets/trueno.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/perno_1.mp3'
     },
     {
       id:2,
       keyCode: 87,
       key: 'W',
       id: 'Lluvia',
-      url: './assets/lluvia.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/sobre-el-terreno-de-grabacion_2.mp3'
     },
     {
       id:3,
       keyCode: 69,
       key: 'E',
       id: 'Neblina',
-      url: './assets/neblina.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/la-brisa_1.mp3'
     },
     {
       id:4,
       keyCode: 82,
       key: 'R',
       id: 'Viento',
-      url: './assets/viento.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/nature008.mp3'
     },
     {
       id:5,
       keyCode: 65,
       key: 'A',
       id: 'Toc-toc',
-      url: './assets/toctoc.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/toc-puerta%201.mp3'
     },
     {
       id:6,
       keyCode: 83,
       key: 'S',
       id: 'Timbre',
-      url: './assets/timbre.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/Doorbell_02_Sound_Effect_Mp3_274.mp3'
     },
     {
       id:7,
       keyCode: 68,
       key: 'D',
       id: "Subir escalera",
-      url: './assets/subirescalera.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/misc085.mp3'
     },
     {
       id:8,
       keyCode: 70,
       key: 'F',
       id: 'Bajar escalera',
-      url: './assets/bajarescalera.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/male-slow-wooden.mp3'
     },
     {
       id:9,
       keyCode: 90,
       key: 'Z',
       id: 'Ventana rota',
-      url: './assets/ventanarota.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/001061339_prev.mp3'
     },
     {
       id:10,
       keyCode: 88,
       key: 'X',
       id: "Cadena inodoro",
-      url: './assets/cadenainodoro.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/cuarto-de-bano_3.mp3'
     },
     {
       id:11,
       keyCode: 67,
       key: 'C',
       id: 'Goteo',
-      url: './assets/goteo.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/bano_1.mp3'
     },
     {
       id:12,
       keyCode: 86,
       key: 'V',
       id: 'Abrir puerta',
-      url: './assets/abrirpuerta.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/Door_Opening_01_Sound_Effect_Mp3_229.mp3'
     }
   ];
 
@@ -93,21 +93,21 @@ const secondSoundsGroup = [
       keyCode: 81,
       key: 'Q',
       id: 'Piedrazo a la ventana',
-      url: './otros/piedrazoalaventana.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/vidrios-quebrandose.mp3'
     },
     {
       id:14,
       keyCode: 87,
       key: 'W',
       id: 'Cerrar puerta',
-      url: './otros/cerrarpuerta.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/bang_4.mp3'
     },
     {
       id:15,
       keyCode: 69,
       key: 'E',
       id: 'Empujar puerta',
-      url: './otros/empujarpuerta.mp3'
+      url: 'http://www.sonidosmp3gratis.com/sounds/010706640_prev.mp3'
     },
     {
       id:16,
