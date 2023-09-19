@@ -5,7 +5,7 @@ const firstSoundsGroup = [
       keyCode: 81,
       key: 'Q',
       id: 'Trueno',
-      url: 'http://www.sonidosmp3gratis.com/sounds/perno_1.mp3'
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3'
     },
     {
       id:2,
