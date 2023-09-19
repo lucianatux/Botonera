@@ -5,7 +5,7 @@ const firstSoundsGroup = [
       keyCode: 81,
       key: 'Q',
       id: 'Trueno',
-      url: 'https://drive.google.com/file/d/1A0o-DEOxURLvGzjiW3Fed8jzlDFR2Sht/view?usp=drive_link'
+      url: 'http://www.sonidosmp3gratis.com/sounds/perno_1.mp3'
     },
     {
       id:2,
